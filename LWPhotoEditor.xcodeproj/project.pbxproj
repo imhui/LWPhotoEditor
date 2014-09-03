@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FCC8AE219B6BDED009A2659 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC8AE119B6BDED009A2659 /* Foundation.framework */; };
+		1FCC8AE419B6BDED009A2659 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC8AE319B6BDED009A2659 /* CoreGraphics.framework */; };
+		1FCC8AE619B6BDED009A2659 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC8AE519B6BDED009A2659 /* UIKit.framework */; };
+		1FCC8AEC19B6BDED009A2659 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FCC8AEA19B6BDED009A2659 /* InfoPlist.strings */; };
+		1FCC8AEE19B6BDED009A2659 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC8AED19B6BDED009A2659 /* main.m */; };
+		1FCC8AF219B6BDED009A2659 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC8AF119B6BDED009A2659 /* AppDelegate.m */; };
+		1FCC8AF519B6BDED009A2659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FCC8AF319B6BDED009A2659 /* Main.storyboard */; };
+		1FCC8AF819B6BDED009A2659 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC8AF719B6BDED009A2659 /* ViewController.m */; };
+		1FCC8AFA19B6BDED009A2659 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FCC8AF919B6BDED009A2659 /* Images.xcassets */; };
+		1FCC8B0119B6BDED009A2659 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC8B0019B6BDED009A2659 /* XCTest.framework */; };
+		1FCC8B0219B6BDED009A2659 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC8AE119B6BDED009A2659 /* Foundation.framework */; };
+		1FCC8B0319B6BDED009A2659 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC8AE519B6BDED009A2659 /* UIKit.framework */; };
+		1FCC8B0B19B6BDED009A2659 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FCC8B0919B6BDED009A2659 /* InfoPlist.strings */; };
+		1FCC8B0D19B6BDED009A2659 /* LWPhotoEditorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC8B0C19B6BDED009A2659 /* LWPhotoEditorTests.m */; };
+		1FCC8B1919B6BE34009A2659 /* LWPhotoEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC8B1819B6BE34009A2659 /* LWPhotoEditor.m */; };
+		1FCC8B1C19B6BE4D009A2659 /* LWPhotoEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC8B1B19B6BE4D009A2659 /* LWPhotoEditView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1FCC8B0419B6BDED009A2659 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC8AD619B6BDED009A2659 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FCC8ADD19B6BDED009A2659;
+			remoteInfo = LWPhotoEditor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1FCC8ADE19B6BDED009A2659 /* LWPhotoEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LWPhotoEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FCC8AE119B6BDED009A2659 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1FCC8AE319B6BDED009A2659 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1FCC8AE519B6BDED009A2659 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1FCC8AE919B6BDED009A2659 /* LWPhotoEditor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LWPhotoEditor-Info.plist"; sourceTree = "<group>"; };
+		1FCC8AEB19B6BDED009A2659 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1FCC8AED19B6BDED009A2659 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1FCC8AEF19B6BDED009A2659 /* LWPhotoEditor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LWPhotoEditor-Prefix.pch"; sourceTree = "<group>"; };
+		1FCC8AF019B6BDED009A2659 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1FCC8AF119B6BDED009A2659 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1FCC8AF419B6BDED009A2659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1FCC8AF619B6BDED009A2659 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1FCC8AF719B6BDED009A2659 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1FCC8AF919B6BDED009A2659 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1FCC8AFF19B6BDED009A2659 /* LWPhotoEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LWPhotoEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FCC8B0019B6BDED009A2659 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1FCC8B0819B6BDED009A2659 /* LWPhotoEditorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LWPhotoEditorTests-Info.plist"; sourceTree = "<group>"; };
+		1FCC8B0A19B6BDED009A2659 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1FCC8B0C19B6BDED009A2659 /* LWPhotoEditorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWPhotoEditorTests.m; sourceTree = "<group>"; };
+		1FCC8B1719B6BE34009A2659 /* LWPhotoEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWPhotoEditor.h; sourceTree = "<group>"; };
+		1FCC8B1819B6BE34009A2659 /* LWPhotoEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWPhotoEditor.m; sourceTree = "<group>"; };
+		1FCC8B1A19B6BE4D009A2659 /* LWPhotoEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWPhotoEditView.h; sourceTree = "<group>"; };
+		1FCC8B1B19B6BE4D009A2659 /* LWPhotoEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWPhotoEditView.m; sourceTree = "<group>"; };
+		1FCC8B1D19B6C07A009A2659 /* LWPhotoEditorConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LWPhotoEditorConstants.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FCC8ADB19B6BDED009A2659 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FCC8AE419B6BDED009A2659 /* CoreGraphics.framework in Frameworks */,
+				1FCC8AE619B6BDED009A2659 /* UIKit.framework in Frameworks */,
+				1FCC8AE219B6BDED009A2659 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FCC8AFC19B6BDED009A2659 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FCC8B0119B6BDED009A2659 /* XCTest.framework in Frameworks */,
+				1FCC8B0319B6BDED009A2659 /* UIKit.framework in Frameworks */,
+				1FCC8B0219B6BDED009A2659 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FCC8AD519B6BDED009A2659 = {
+			isa = PBXGroup;
+			children = (
+				1FCC8AE719B6BDED009A2659 /* LWPhotoEditor */,
+				1FCC8B0619B6BDED009A2659 /* LWPhotoEditorTests */,
+				1FCC8AE019B6BDED009A2659 /* Frameworks */,
+				1FCC8ADF19B6BDED009A2659 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1FCC8ADF19B6BDED009A2659 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC8ADE19B6BDED009A2659 /* LWPhotoEditor.app */,
+				1FCC8AFF19B6BDED009A2659 /* LWPhotoEditorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FCC8AE019B6BDED009A2659 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC8AE119B6BDED009A2659 /* Foundation.framework */,
+				1FCC8AE319B6BDED009A2659 /* CoreGraphics.framework */,
+				1FCC8AE519B6BDED009A2659 /* UIKit.framework */,
+				1FCC8B0019B6BDED009A2659 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1FCC8AE719B6BDED009A2659 /* LWPhotoEditor */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC8B1619B6BE06009A2659 /* PhotoEditor */,
+				1FCC8AF019B6BDED009A2659 /* AppDelegate.h */,
+				1FCC8AF119B6BDED009A2659 /* AppDelegate.m */,
+				1FCC8AF319B6BDED009A2659 /* Main.storyboard */,
+				1FCC8AF619B6BDED009A2659 /* ViewController.h */,
+				1FCC8AF719B6BDED009A2659 /* ViewController.m */,
+				1FCC8AF919B6BDED009A2659 /* Images.xcassets */,
+				1FCC8AE819B6BDED009A2659 /* Supporting Files */,
+			);
+			path = LWPhotoEditor;
+			sourceTree = "<group>";
+		};
+		1FCC8AE819B6BDED009A2659 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC8AE919B6BDED009A2659 /* LWPhotoEditor-Info.plist */,
+				1FCC8AEA19B6BDED009A2659 /* InfoPlist.strings */,
+				1FCC8AED19B6BDED009A2659 /* main.m */,
+				1FCC8AEF19B6BDED009A2659 /* LWPhotoEditor-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FCC8B0619B6BDED009A2659 /* LWPhotoEditorTests */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC8B0C19B6BDED009A2659 /* LWPhotoEditorTests.m */,
+				1FCC8B0719B6BDED009A2659 /* Supporting Files */,
+			);
+			path = LWPhotoEditorTests;
+			sourceTree = "<group>";
+		};
+		1FCC8B0719B6BDED009A2659 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC8B0819B6BDED009A2659 /* LWPhotoEditorTests-Info.plist */,
+				1FCC8B0919B6BDED009A2659 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FCC8B1619B6BE06009A2659 /* PhotoEditor */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC8B1D19B6C07A009A2659 /* LWPhotoEditorConstants.h */,
+				1FCC8B1719B6BE34009A2659 /* LWPhotoEditor.h */,
+				1FCC8B1819B6BE34009A2659 /* LWPhotoEditor.m */,
+				1FCC8B1A19B6BE4D009A2659 /* LWPhotoEditView.h */,
+				1FCC8B1B19B6BE4D009A2659 /* LWPhotoEditView.m */,
+			);
+			path = PhotoEditor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FCC8ADD19B6BDED009A2659 /* LWPhotoEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FCC8B1019B6BDED009A2659 /* Build configuration list for PBXNativeTarget "LWPhotoEditor" */;
+			buildPhases = (
+				1FCC8ADA19B6BDED009A2659 /* Sources */,
+				1FCC8ADB19B6BDED009A2659 /* Frameworks */,
+				1FCC8ADC19B6BDED009A2659 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LWPhotoEditor;
+			productName = LWPhotoEditor;
+			productReference = 1FCC8ADE19B6BDED009A2659 /* LWPhotoEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1FCC8AFE19B6BDED009A2659 /* LWPhotoEditorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FCC8B1319B6BDED009A2659 /* Build configuration list for PBXNativeTarget "LWPhotoEditorTests" */;
+			buildPhases = (
+				1FCC8AFB19B6BDED009A2659 /* Sources */,
+				1FCC8AFC19B6BDED009A2659 /* Frameworks */,
+				1FCC8AFD19B6BDED009A2659 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FCC8B0519B6BDED009A2659 /* PBXTargetDependency */,
+			);
+			name = LWPhotoEditorTests;
+			productName = LWPhotoEditorTests;
+			productReference = 1FCC8AFF19B6BDED009A2659 /* LWPhotoEditorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FCC8AD619B6BDED009A2659 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___FULLUSERNAME___";
+				TargetAttributes = {
+					1FCC8AFE19B6BDED009A2659 = {
+						TestTargetID = 1FCC8ADD19B6BDED009A2659;
+					};
+				};
+			};
+			buildConfigurationList = 1FCC8AD919B6BDED009A2659 /* Build configuration list for PBXProject "LWPhotoEditor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FCC8AD519B6BDED009A2659;
+			productRefGroup = 1FCC8ADF19B6BDED009A2659 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FCC8ADD19B6BDED009A2659 /* LWPhotoEditor */,
+				1FCC8AFE19B6BDED009A2659 /* LWPhotoEditorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FCC8ADC19B6BDED009A2659 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FCC8AFA19B6BDED009A2659 /* Images.xcassets in Resources */,
+				1FCC8AEC19B6BDED009A2659 /* InfoPlist.strings in Resources */,
+				1FCC8AF519B6BDED009A2659 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FCC8AFD19B6BDED009A2659 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FCC8B0B19B6BDED009A2659 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FCC8ADA19B6BDED009A2659 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FCC8AF819B6BDED009A2659 /* ViewController.m in Sources */,
+				1FCC8B1C19B6BE4D009A2659 /* LWPhotoEditView.m in Sources */,
+				1FCC8AF219B6BDED009A2659 /* AppDelegate.m in Sources */,
+				1FCC8B1919B6BE34009A2659 /* LWPhotoEditor.m in Sources */,
+				1FCC8AEE19B6BDED009A2659 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FCC8AFB19B6BDED009A2659 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FCC8B0D19B6BDED009A2659 /* LWPhotoEditorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FCC8B0519B6BDED009A2659 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FCC8ADD19B6BDED009A2659 /* LWPhotoEditor */;
+			targetProxy = 1FCC8B0419B6BDED009A2659 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1FCC8AEA19B6BDED009A2659 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FCC8AEB19B6BDED009A2659 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1FCC8AF319B6BDED009A2659 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FCC8AF419B6BDED009A2659 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1FCC8B0919B6BDED009A2659 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FCC8B0A19B6BDED009A2659 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FCC8B0E19B6BDED009A2659 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1FCC8B0F19B6BDED009A2659 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1FCC8B1119B6BDED009A2659 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LWPhotoEditor/LWPhotoEditor-Prefix.pch";
+				INFOPLIST_FILE = "LWPhotoEditor/LWPhotoEditor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1FCC8B1219B6BDED009A2659 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LWPhotoEditor/LWPhotoEditor-Prefix.pch";
+				INFOPLIST_FILE = "LWPhotoEditor/LWPhotoEditor-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1FCC8B1419B6BDED009A2659 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LWPhotoEditor.app/LWPhotoEditor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LWPhotoEditor/LWPhotoEditor-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LWPhotoEditorTests/LWPhotoEditorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1FCC8B1519B6BDED009A2659 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LWPhotoEditor.app/LWPhotoEditor";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LWPhotoEditor/LWPhotoEditor-Prefix.pch";
+				INFOPLIST_FILE = "LWPhotoEditorTests/LWPhotoEditorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FCC8AD919B6BDED009A2659 /* Build configuration list for PBXProject "LWPhotoEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FCC8B0E19B6BDED009A2659 /* Debug */,
+				1FCC8B0F19B6BDED009A2659 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FCC8B1019B6BDED009A2659 /* Build configuration list for PBXNativeTarget "LWPhotoEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FCC8B1119B6BDED009A2659 /* Debug */,
+				1FCC8B1219B6BDED009A2659 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1FCC8B1319B6BDED009A2659 /* Build configuration list for PBXNativeTarget "LWPhotoEditorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FCC8B1419B6BDED009A2659 /* Debug */,
+				1FCC8B1519B6BDED009A2659 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FCC8AD619B6BDED009A2659 /* Project object */;
+}
