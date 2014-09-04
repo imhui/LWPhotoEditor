@@ -81,7 +81,7 @@
     
     _photoEditView = [[LWPhotoEditView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(viewBounds), CGRectGetHeight(viewBounds) - CGRectGetHeight(toolbar.bounds))];
     _photoEditView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-//    _photoEditView.zoomEnable = YES;
+    _photoEditView.zoomEnable = YES;
     [self.view addSubview:_photoEditView];
     if (self.cropOptions.count) {
         _photoEditView.cropOption = [self.cropOptions[0] intValue];

@@ -91,6 +91,8 @@
     UIImageView *_imageView;
     LWPhotoCropView *_cropView;
     UIEdgeInsets _scrollViewContentInset;
+    
+    UIView *_cropBox;
 }
 
 @end
@@ -120,6 +122,9 @@
         
         self.cropOption = LWPhotoEditorCropOptionSquare;
         
+        _cropBox = [[UIView alloc] initWithFrame:CGRectZero];
+        _cropBox.layer.borderColor = [UIColor yellowColor].CGColor;
+        _cropBox.layer.borderWidth = 1.0;
     }
     return self;
 }
@@ -149,10 +154,6 @@
     }
     _scrollView.contentSize = contentSize;
     
-    NSLog(@"=====================");
-    NSLog(@"content size: %@", NSStringFromCGSize(_scrollView.contentSize));
-    
-    
     CGRect visiableRect = [_cropView visiableRect];
     
     UIEdgeInsets contentInset = UIEdgeInsetsZero;
@@ -174,8 +175,6 @@
     _scrollView.contentInset = contentInset;
     _scrollViewContentInset = _scrollView.contentInset;
     
-    NSLog(@"content size: %@", NSStringFromCGSize(_scrollView.contentSize));
-    NSLog(@"content inset: %@", NSStringFromUIEdgeInsets(_scrollViewContentInset));
 }
 
 #pragma mark - property
@@ -209,17 +208,23 @@
     }
     
     CGRect visiableRect = [_cropView visiableRect];
-    CGFloat originY = _scrollView.contentInset.top + _scrollView.contentOffset.y;
-    
-    
-    CGFloat width = CGRectGetWidth(visiableRect);
+    CGFloat zoomScale = _scrollView.zoomScale;
+
+    CGFloat originY = (_scrollView.contentInset.top + _scrollView.contentOffset.y) / zoomScale;
+    CGFloat originX = _scrollView.contentOffset.x / zoomScale;
+    CGFloat width = CGRectGetWidth(visiableRect) / zoomScale;
     CGFloat height = CGRectGetHeight(visiableRect);
-    if (height > CGRectGetHeight(_imageView.bounds)) {
-        height = CGRectGetHeight(_imageView.bounds);
+    if ((originY + height) > CGRectGetHeight(_imageView.frame)) {
+        height = CGRectGetHeight(_imageView.frame) - originY;
     }
+    height = height / zoomScale;
+    
+//    _cropBox.frame = CGRectMake(originX, originY, width, height);
+//    [_imageView addSubview:_cropBox];
     
     CGFloat scale = _imageView.image.size.width / CGRectGetWidth(_scrollView.bounds);
-    CGRect cropRect = CGRectMake(0, originY * scale, width * scale , height * scale);
+    CGRect cropRect = CGRectMake(originX * scale, originY * scale, width * scale, height * scale);
+    NSLog(@"crop rect: %@", NSStringFromCGRect(cropRect));
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         UIImage *cropImage = [self cropImage:_imageView.image inRect:cropRect];
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -252,10 +257,9 @@
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView {
     
-    NSLog(@">>>>>> content size: %@", NSStringFromCGSize(_scrollView.contentSize));
-    CGFloat offsetX = (CGRectGetWidth(scrollView.bounds) > scrollView.contentSize.width) ? (CGRectGetWidth(scrollView.bounds) - scrollView.contentSize.width) * 0.5 : 0.0;
-    CGFloat offsetY = (CGRectGetHeight(scrollView.bounds) > scrollView.contentSize.height) ? (CGRectGetHeight(scrollView.bounds) - scrollView.contentSize.height) * 0.5 : 0.0;
-    _imageView.center = CGPointMake(scrollView.contentSize.width * 0.5 + offsetX, scrollView.contentSize.height * 0.5 + offsetY);
+    CGFloat offsetX = (CGRectGetWidth(_scrollView.bounds) > _scrollView.contentSize.width) ? (CGRectGetWidth(_scrollView.bounds) - _scrollView.contentSize.width) * 0.5 : 0.0;
+    CGFloat offsetY = (CGRectGetHeight(_scrollView.bounds) > _scrollView.contentSize.height) ? (CGRectGetHeight(_scrollView.bounds) - _scrollView.contentSize.height) * 0.5 : 0.0;
+    _imageView.center = CGPointMake(_scrollView.contentSize.width * 0.5 + offsetX, _scrollView.contentSize.height * 0.5 + offsetY);
     
 }
 
@@ -264,27 +268,41 @@
     if (scale == scrollView.minimumZoomScale) {
         [self layoutImage];
     }
-//    else {
-//        
-//        if (CGRectGetHeight(_scrollView.bounds) > _scrollView.contentSize.height) {
-//            CGFloat insetOffset = CGRectGetHeight(_scrollView.bounds) - _scrollView.contentSize.height;
-//            UIEdgeInsets insets = _scrollView.contentInset;
-//            insets.top = insetOffset / 2 * scale;
-//            insets.bottom = insetOffset / 2 + CGRectGetMinY([_cropView visiableRect]);
-//            _scrollView.contentInset = insets;
-//            
-////            CGPoint contentOffset = _scrollView.contentOffset;
-////            contentOffset.y = 0;
-////            _scrollView.contentOffset = contentOffset;
-//            
-//            NSLog(@"content inset: %@", NSStringFromUIEdgeInsets(_scrollView.contentInset));
-//            NSLog(@"content offset: %@", NSStringFromCGPoint(_scrollView.contentOffset));
-//        }
-//        else {
-//            _scrollView.contentInset = _scrollViewContentInset;
-//        }
-//
-//    }
+    else {
+    
+        _scrollView.contentInset = _scrollViewContentInset;
+        
+        if (CGRectGetHeight(_imageView.bounds) < CGRectGetHeight(_scrollView.bounds)) {
+            CGRect visiableRect = [_cropView visiableRect];
+            if (_scrollView.contentSize.height < CGRectGetHeight(_scrollView.bounds)) {
+                
+                
+                if (CGRectGetHeight(_imageView.frame) > CGRectGetHeight(visiableRect)) {
+                    
+                    CGSize contentSize = _scrollView.contentSize;
+                    contentSize.height = CGRectGetHeight(_scrollView.bounds);
+                    _scrollView.contentSize = contentSize;
+                    
+                    UIEdgeInsets inset = _scrollView.contentInset;
+                    inset.top = ceilf((CGRectGetHeight(_imageView.frame) - CGRectGetHeight(visiableRect)) / 2);
+                    inset.bottom = inset.top;
+                    _scrollView.contentInset = inset;
+                    
+                }
+            }
+            else {
+                UIEdgeInsets inset = _scrollView.contentInset;
+                inset.top = CGRectGetMinY(visiableRect);
+                inset.bottom = inset.top;
+                _scrollView.contentInset = inset;
+            }
+        }
+        
+    }
+    
 }
+
+
+
 
 @end
